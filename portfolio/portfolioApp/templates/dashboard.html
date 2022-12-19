@@ -1,0 +1,48 @@
+{% extends 'index.html'%}
+
+{%block content%}
+<style>
+    #div1{
+        display: flex;
+        flex-direction: row;
+    }
+    button {
+  background-color: burlywood ;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+        position: relative;
+        left: 600px;
+        top : 200px;
+  font-size: 16px;
+}
+    button:hover {
+  background-color : chocolate;
+  color: white;
+}
+    #h {
+        font-family: "Arial Black";
+        font-size: large;
+         position: relative;
+        left: 670px;
+        top : 100px;
+    }
+</style>
+  <h1 id="h">welcome , {{user.username}}</h1>
+
+<table>
+    <div id="div1">
+    <tr>
+        <td>
+<button><a href="{% url 'AddInfo'%}"> Créer Portfolio</a></button>
+        </td>
+        <td>
+  <button><a href="{% url 'logout'%}"> Logout</a></button>
+        </td>
+    </tr>
+        </div>
+    </table>
+{%endblock%}

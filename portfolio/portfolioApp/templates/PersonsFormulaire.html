@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person Formulaire</title>
+</head>
+<body>
+    <h2> Add Person</h2>
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="save btn"> save </button>
+
+    </form>
+</body>
+</html>
